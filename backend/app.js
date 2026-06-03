@@ -1,9 +1,9 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import { PORT } from "./config/env.js";
 
 const app = express();
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (req, res) => {
   res.send("Welcome to the SubTrack API!");
 });
 
