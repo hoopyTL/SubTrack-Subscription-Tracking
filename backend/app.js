@@ -6,11 +6,14 @@ import subscriptionRouter from "./routes/subscription.routes.js";
 import connectDB from "./database/mongodb.js";
 import errorMiddleware from "./middlewares/error.middleware.js";
 import cookieParser from "cookie-parser";
+import { arcjetMiddleware } from "./middlewares/arject.middleware.js";
+
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(arcjetMiddleware);
 
 app.get("/", (req, res) => {
   res.send("Welcome to the SubTrack API!");
