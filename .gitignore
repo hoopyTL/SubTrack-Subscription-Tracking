@@ -35,6 +35,9 @@ jspm_packages/
 *.swp
 *.swo
 
+# Personal study notes
+HOC-TAP-BACKEND.md
+
 # Operating System Files
 .DS_Store
 .DS_Store?
